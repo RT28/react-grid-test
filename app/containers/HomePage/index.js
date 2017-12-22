@@ -44,26 +44,34 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
       columns: [{
         name: 'id',
         title: 'Id',
+        cls: 'grid-column-cls',
       }, {
         title: 'Name',
         columns: [{
           name: 'firstName',
-          title: 'First Name'
+          title: 'First Name',
+          cls: 'grid-column-cls',
+          cellCls: 'grid-cell-cls',
         }, {
           name: 'lastName',
           title: 'Last Name',
+          cls: 'grid-column-cls',
+          cellCls: 'grid-cell-cls',
         }],
       }, {
         title: 'Scorecard',
         columns: [{
           title: 'Physics',
           name: 'physics',
+          cls: 'grid-column-cls',
         }, {
           title: 'Chemistry',
           name: 'chemistry',
+          cls: 'grid-column-cls',
         }, {
           title: 'Math',
           name: 'math',
+          cls: 'grid-column-cls',
         }]
       }],
     };

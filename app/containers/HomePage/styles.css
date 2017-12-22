@@ -6,3 +6,10 @@
 .custom-grid-header-cls {
   color: #FFF;
 }
+
+.grid-column-cls {
+  border-width: 0px 1px;
+  border-color: #DEDEDE;
+  border-style: solid;
+  width: 150px;
+}
