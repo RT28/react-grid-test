@@ -26,44 +26,45 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
   getConfig() {
     return {
       cls: 'grid-cls',
+      data: [{
+        id: 1,
+        firstName: 'Riddhi',
+        lastName: 'Thakkar',
+        physics: 20,
+        chemistry: 34,
+        math: 89,
+      }, {
+        id: 2,
+        firstName: 'Parth',
+        lastName: 'Thakkar',
+        physics: 20,
+        chemistry: 34,
+        math: 89,
+      }],
       columns: [{
         name: 'id',
         title: 'Id',
       }, {
         title: 'Name',
-        headerCls: 'custom-grid-header-cls',
-        headerRenderer: (index, columns, data) => {
-          return (
-            <span>Testing header renderer</span>
-          )
-        },
         columns: [{
           name: 'firstName',
           title: 'First Name'
-        }, {
-          name: 'middleName',
-          title: 'Middle Name',
         }, {
           name: 'lastName',
           title: 'Last Name',
         }],
       }, {
-        title: 'Header Level 1',
+        title: 'Scorecard',
         columns: [{
-          title: 'Sub Header Level 1',
-          columns: [{
-            title: 'Sub Header Level 1.1',
-          }, {
-            title: 'Sub Header Level 1.2',
-          }],
+          title: 'Physics',
+          name: 'physics',
         }, {
-          title: 'Sub Header Level 2',
-          columns: [{
-            title: 'Sub Header Level 2.1',
-          }, {
-            title: 'Sub Header Level 2.2',
-          }],
-        }],
+          title: 'Chemistry',
+          name: 'chemistry',
+        }, {
+          title: 'Math',
+          name: 'math',
+        }]
       }],
     };
   }
