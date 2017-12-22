@@ -37,9 +37,9 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
         id: 2,
         firstName: 'Parth',
         lastName: 'Thakkar',
-        physics: 20,
-        chemistry: 34,
-        math: 89,
+        physics: 50,
+        chemistry: 24,
+        math: 90,
       }],
       columns: [{
         name: 'id',
@@ -64,17 +64,27 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
           title: 'Physics',
           name: 'physics',
           cls: 'grid-column-cls',
+          cellRenderer: this.cellRendererTest,
         }, {
           title: 'Chemistry',
           name: 'chemistry',
           cls: 'grid-column-cls',
+          cellRenderer: this.cellRendererTest,
         }, {
           title: 'Math',
           name: 'math',
           cls: 'grid-column-cls',
+          cellRenderer: this.cellRendererTest,
         }]
       }],
     };
+  }
+
+  cellRendererTest = (value, item, data) => {
+    if (value < 40) {
+      return <span style={{ color: 'red' }}>{value}</span>;
+    }
+    return value;
   }
 
   render() {
