@@ -83,6 +83,10 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
         chemistry: 24,
         math: 90,
       }],
+      sort: {
+        allowed: 'boolean',
+        type: 'client'
+      },
       columns: [{
         name: 'id',
         title: 'Id',
@@ -94,6 +98,7 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
           title: 'First Name',
           cls: 'grid-column-cls',
           cellCls: 'grid-cell-cls',
+          sort: ''
         }, {
           name: 'lastName',
           title: 'Last Name',
